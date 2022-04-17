@@ -21,10 +21,7 @@
     cursor: pointer;
   
     transition: background-color 250ms var(--trans-prop);
+    &:hover, &:focus{
+      background-color: var(--accent-color-focus);
+    }
   }
-
-  .button:hover, .button:focus{
-    background-color: var(--accent-color-focus);
-  }
-
-  

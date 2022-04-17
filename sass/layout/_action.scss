@@ -3,16 +3,12 @@
     padding-bottom: 94px;
     background-color: var(--primery-white-color);
   }
-  
+
   .action-list {
     display: flex;
     justify-content: center;
   }
-  
-  .action-icons {
-    display: flex;
-  }
-  
+
   .action-box-icons {
     display: flex;
     justify-content: center;
@@ -25,10 +21,13 @@
     background-color: rgba(245, 244, 250, 1);
   }
   
-  .action-icons .item:last-child {
-    margin-right: 0;
+  .action-icons {
+    display: flex;
+    .item:last-child {
+      margin-right: 0;
+    }
   }
-  
+    
   .action-icon {
     display: inline-flex;
     width: 70px;
@@ -39,10 +38,9 @@
   .item-action {
     margin-right: var(--mr);
     width: 270px;
-  }
-  
-  .item-action:last-child {
-    margin-right: 0px;
+    &:last-child {
+      margin-right: 0px;
+    }
   }
   
   .title {

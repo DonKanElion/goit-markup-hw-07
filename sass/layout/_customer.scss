@@ -6,6 +6,14 @@
   
   .customer-list {
     display: flex;
+    .item:last-child {
+      margin-right: 0;
+    }
+    .item:hover,
+    .item:focus {
+    fill: var(--accent-color);
+    border: 1px solid var(--accent-color);
+  }
   }
   
   .customer-list-item {
@@ -17,18 +25,12 @@
     height: 92px;
     background-color: var(--primery-white-color);
     fill: rebeccapurple;
+    &:hover,
+    &:focus {
+      border: 1px solid var(--accent-color);
+    }
   }
-  
-  .customer-list .item:last-child {
-    margin-right: 0;
-  }
-  
-  .customer-list .item:hover,
-  .customer-list .item:focus {
-    fill: var(--accent-color);
-    border: 1px solid var(--accent-color);
-  }
-  
+
   .customer-list-link {
     display: flex;
     align-items: center;
@@ -40,19 +42,13 @@
     fill: var(--fill-icon);
     transition: background-color 250ms var(--trans-prop) 0ms,
       fill 250ms var(--trans-prop) 0ms;
+      &:hover,
+      &:focus {
+    fill: var(--accent-color);
   }
-  
-  .customer-list-item:hover,
-  .customer-list-item:focus {
-    border: 1px solid var(--accent-color);
   }
-  
+ 
   .customer-list-icon {
     width: 106px;
     height: 60px;
-  }
-  
-  .customer-list-link:hover,
-  .customer-list-link:focus {
-    fill: var(--accent-color);
   }

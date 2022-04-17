@@ -68,8 +68,11 @@ img {
   transition: color 250ms var(--trans-prop) 0ms;
 }
 
+.link:hover, .link:focus {
+  color: var(--accent-color);
+}
+
 body {
-  /* background-color: var(--bgc-grey); */
   color: var(--title-text-color);
   font-family: Roboto, sans-serif;
   font-style: normal;
@@ -102,6 +105,10 @@ body {
   margin-right: auto;
 }
 
+.menu > .item:last-child {
+  margin-right: 0px;
+}
+
 .link-nav {
   display: block;
   padding-top: 32px;
@@ -118,8 +125,9 @@ body {
   margin-right: 50px;
 }
 
-.menu > .item:last-child {
-  margin-right: 0px;
+.contact {
+  display: flex;
+  margin-left: auto;
 }
 
 .contact-icon {
@@ -127,11 +135,6 @@ body {
   height: auto;
   margin-right: 10px;
   fill: currentColor;
-}
-
-.contact {
-  display: flex;
-  margin-left: auto;
 }
 
 .contact > .item:last-child {
@@ -153,11 +156,6 @@ body {
   height: 4px;
   border-radius: 2px;
   background-color: var(--accent-color);
-}
-
-.link:hover,
-.link:focus {
-  color: var(--accent-color);
 }
 
 .contact-item-text {
@@ -323,8 +321,7 @@ body {
   outline: none;
 }
 
-.form-input:hover,
-.form-input:focus {
+.form-input:hover, .form-input:focus {
   border: 1px solid var(--accent-color);
 }
 
@@ -358,8 +355,7 @@ body {
   color: rgba(117, 117, 117, 0.5);
 }
 
-.form-textarea:focus,
-.form-textarea:hover {
+.form-textarea:focus, .form-textarea:hover {
   border: 1px solid var(--accent-color);
 }
 
@@ -375,10 +371,6 @@ body {
   display: flex;
   align-items: center;
   color: var(--form-labal-color);
-}
-
-.accent-policy:focus + .form-labal-checkbox::before {
-  outline: 1px solid var(--accent-color);
 }
 
 .form-labal-checkbox::before {
@@ -398,6 +390,10 @@ body {
 .accent-policy:checked + .form-labal-checkbox::before {
   background-image: url(../images/icon-check.svg);
   border: 1px solid transparent;
+}
+
+.accent-policy:focus + .form-labal-checkbox::before {
+  outline: 1px solid var(--accent-color);
 }
 
 .conditions {
@@ -424,8 +420,7 @@ body {
   transition: fill 250ms var(--trans-prop);
 }
 
-.button-close:hover,
-.button-close:focus {
+.button-close:hover, .button-close:focus {
   fill: var(--accent-color);
 }
 
@@ -440,10 +435,6 @@ body {
   justify-content: center;
 }
 
-.action-icons {
-  display: flex;
-}
-
 .action-box-icons {
   display: flex;
   justify-content: center;
@@ -453,6 +444,10 @@ body {
   width: 270px;
   height: 120px;
   background-color: #f5f4fa;
+}
+
+.action-icons {
+  display: flex;
 }
 
 .action-icons .item:last-child {
@@ -541,15 +536,6 @@ body {
   justify-content: center;
 }
 
-.team-photo {
-  width: 270px;
-  height: 260px;
-}
-
-.team-box {
-  padding: 30px 32px;
-}
-
 .team-list .item {
   margin-right: var(--mr);
   width: 270px;
@@ -562,6 +548,15 @@ body {
 
 .team-list .item:last-child {
   margin-right: 0;
+}
+
+.team-photo {
+  width: 270px;
+  height: 260px;
+}
+
+.team-box {
+  padding: 30px 32px;
 }
 
 .team-name {
@@ -604,8 +599,7 @@ body {
   transition: background-color 250ms var(--trans-prop) 0ms, fill 250ms var(--trans-prop) 0ms;
 }
 
-.social-list-link:hover,
-.social-list-link:focus {
+.social-list-link:hover, .social-list-link:focus {
   background-color: var(--accent-color);
   fill: var(--primery-white-color);
 }
@@ -625,6 +619,16 @@ body {
   display: flex;
 }
 
+.customer-list .item:last-child {
+  margin-right: 0;
+}
+
+.customer-list .item:hover,
+.customer-list .item:focus {
+  fill: var(--accent-color);
+  border: 1px solid var(--accent-color);
+}
+
 .customer-list-item {
   border: 1px solid var(--fill-icon);
   border-radius: 4px;
@@ -635,13 +639,7 @@ body {
   fill: rebeccapurple;
 }
 
-.customer-list .item:last-child {
-  margin-right: 0;
-}
-
-.customer-list .item:hover,
-.customer-list .item:focus {
-  fill: var(--accent-color);
+.customer-list-item:hover, .customer-list-item:focus {
   border: 1px solid var(--accent-color);
 }
 
@@ -655,19 +653,13 @@ body {
   transition: background-color 250ms var(--trans-prop) 0ms, fill 250ms var(--trans-prop) 0ms;
 }
 
-.customer-list-item:hover,
-.customer-list-item:focus {
-  border: 1px solid var(--accent-color);
+.customer-list-link:hover, .customer-list-link:focus {
+  fill: var(--accent-color);
 }
 
 .customer-list-icon {
   width: 106px;
   height: 60px;
-}
-
-.customer-list-link:hover,
-.customer-list-link:focus {
-  fill: var(--accent-color);
 }
 
 .footer {
@@ -685,10 +677,6 @@ body {
   margin-right: 70px;
 }
 
-.address {
-  margin-top: 20px;
-}
-
 .footer-contact {
   display: inline-block;
   font-style: normal;
@@ -698,19 +686,27 @@ body {
   margin-bottom: 10px;
 }
 
-.text-white {
-  color: var(--primery-white-color);
-}
-
 .footer-contact > .item:last-child {
   margin-bottom: 0px;
 }
 
-.footer-social-menu {
+.address {
+  margin-top: 20px;
+}
+
+.text-white {
+  color: var(--primery-white-color);
+}
+
+.footer__social-wrapper {
   margin-right: 93px;
 }
 
-.social {
+.footer__social {
+  padding: 0;
+}
+
+.footer__social-text {
   margin-bottom: 20px;
   font-size: 14px;
   font-weight: 700;
@@ -719,31 +715,27 @@ body {
   color: var(--primery-white-color);
 }
 
-.footer-social-list {
-  padding: 0;
-}
-
-.footer-social-list-item {
+.footer__social-item {
   fill: var(--primery-white-color);
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.1);
 }
 
-.footer-social-list-item:hover {
+.footer__social-item:hover {
   fill: var(--primery-white-color);
   background-color: var(--accent-color);
 }
 
-.footer-social-link {
+.footer__social-link {
   fill: var(--primery-white-color);
 }
 
-.footer_form {
+.footer__form {
   display: inline-block;
   position: relative;
 }
 
-.footer-form-user-email {
+.footer__form-user-email {
   display: flex;
   margin-bottom: 20px;
   font-size: 14px;
@@ -753,7 +745,7 @@ body {
   color: var(--primery-white-color);
 }
 
-.footer-input {
+.footer__form-input {
   width: 358px;
   height: 50px;
   padding-left: 16px;
@@ -767,11 +759,11 @@ body {
   background-color: transparent;
 }
 
-.footer-input::placeholder {
+.footer__form-input::placeholder {
   color: rgba(117, 117, 117, 0.5);
 }
 
-.footer-form .social-list-icon {
+.footer__form .social-list-icon {
   width: 24px;
   height: 24px;
   margin-left: 12px;

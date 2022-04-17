@@ -9,14 +9,13 @@
     opacity: 1;
     visibility: visible;
     transition: opacity 250ms var(--trans-prop), backround 250ms var(--trans-prop);
+    &.is-hidden {
+      visibility: hidden;
+      opacity: 0;
+      pointer-events: none;
+    }
   }
-  
-  .backdrop.is-hidden {
-    visibility: hidden;
-    opacity: 0;
-    pointer-events: none;
-  }
-  
+    
   .modal {
     position: absolute;
   
@@ -85,11 +84,10 @@
     border: 1px solid rgba(33, 33, 33, 0.2);
     transition: border-color 250ms var(--trans-prop);
     outline: none;
-  }
-  
-  .form-input:hover,
-  .form-input:focus {
-    border: 1px solid var(--accent-color);
+    &:hover,
+    &:focus {
+      border: 1px solid var(--accent-color);
+    }
   }
   
   .form-contact-icon {
@@ -100,11 +98,10 @@
     fill: var(--title-text-color);
   
     transition: fill 250ms var(--trans-prop) 0ms;
-  }
-  
-  .form-input:hover + .form-contact-icon,
-  .form-input:focus + .form-contact-icon {
-    fill: var(--accent-color);
+    .form-input:hover + &,
+    .form-input:focus + & {
+      fill: var(--accent-color);
+    }
   }
   
   .form-textarea {
@@ -119,15 +116,13 @@
     border: 1px solid rgba(33, 33, 33, 0.2);
     outline: none;
     resize: none;
-  }
-  
-  .form-textarea::placeholder {
-    color: rgba(117, 117, 117, 0.5);
-  }
-  
-  .form-textarea:focus,
-  .form-textarea:hover {
-    border: 1px solid var(--accent-color);
+    &::placeholder {
+      color: rgba(117, 117, 117, 0.5);
+    }
+    &:focus,
+    &:hover {
+      border: 1px solid var(--accent-color);
+    }
   }
   
   .form-checkbox {
@@ -143,10 +138,6 @@
     display: flex;
     align-items: center;
     color: var(--form-labal-color);
-  }
-  
-  .accent-policy:focus + .form-labal-checkbox::before {
-    outline: 1px solid var(--accent-color);
   }
   
   .form-labal-checkbox::before {
@@ -166,11 +157,13 @@
     cursor: pointer;
   
     transition: background 250ms var(--trans-prop);
-  }
-  
-  .accent-policy:checked + .form-labal-checkbox::before {
-    background-image: url(../images/icon-check.svg);
-    border: 1px solid transparent;
+    .accent-policy:checked + & {
+      background-image: url(../images/icon-check.svg);
+      border: 1px solid transparent;
+    }
+    .accent-policy:focus + & {
+      outline: 1px solid var(--accent-color);
+    }
   }
   
   .conditions {
@@ -200,9 +193,8 @@
   
     cursor: pointer;
     transition: fill 250ms var(--trans-prop);
-  }
-  
-  .button-close:hover,
-  .button-close:focus {
-    fill: var(--accent-color);
+    &:hover,
+    &:focus {
+      fill: var(--accent-color);
+    }
   }

@@ -6,18 +6,14 @@
   .working-list {
     display: flex;
     justify-content: center;
-  }
-  
-  .working-list .item {
-    position: relative;
-    margin-right: var(--mr);
-  }
-  
-  .working-list > .item:last-child {
+    .item {
+      position: relative;
+      margin-right: var(--mr);
+    }
+       > .item:last-child {
     margin-right: 0;
   }
-  
-  .working-list .item > p {
+    .item > p {
     position: absolute;
     bottom: 0;
   
@@ -32,4 +28,5 @@
   
     text-transform: uppercase;
     text-align: center;
+  }
   }
